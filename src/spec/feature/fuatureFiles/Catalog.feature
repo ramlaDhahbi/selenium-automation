@@ -21,6 +21,7 @@ Feature: je souhaite chercher un produit dans la liste des produits
     And Je clique sur le sous menu Categories
     And Je clique sur le bouton Add new
     And Je saisis le nom "Categorie Test"
+    And Je saisis une description "This is a description" "Description_ifr"
     And Je selctionne le parent category "Computers"
     And Je telecharge une image "C:\\Users\\Atef\\Desktop\\formation.png"
     And Je clique sur le boutton Save

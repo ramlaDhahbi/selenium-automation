@@ -20,7 +20,7 @@ import io.cucumber.junit.CucumberOptions;
 		features = {"src/spec/feature"},
 		//glue= {"step_definition"}
 		plugin= {"pretty","html:target/cucumber-report.html", "json:target/cucumber.json"},
-		tags= ("@authentification-valid"),
+		tags= ("@ajouter-Categorie"),
 		monochrome=true,
 		snippets=CAMELCASE
 		)

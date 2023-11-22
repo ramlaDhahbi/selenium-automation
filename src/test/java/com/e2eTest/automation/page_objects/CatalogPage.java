@@ -34,10 +34,8 @@ public class CatalogPage extends BasePage {
 	@FindBy(how = How.ID, using = "Name")
 	private static WebElement categorieName;
 
-	/*
-	 * @FindBy(how = How.XPATH, using = "//iframe[@id='Description_ifr']") private
-	 * static WebElement categorieDescription;
-	 */
+	@FindBy(how = How.ID, using = "Description_ifr")
+	private static WebElement champDescription;
 
 	@FindBy(how = How.ID, using = "ParentCategoryId")
 	private static WebElement parentCategorie;
@@ -87,10 +85,9 @@ public class CatalogPage extends BasePage {
 		return categorieName;
 	}
 
-	/*
-	 * public static WebElement getDescriptionCategorie() { return
-	 * categorieDescription; }
-	 */
+	public static WebElement getChampDescription() {
+		return champDescription;
+	}
 
 	public static WebElement getParentCategorie() {
 

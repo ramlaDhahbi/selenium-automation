@@ -70,16 +70,13 @@ public class CatalogStepDefinition {
 		Thread.sleep(3000);
 	}
 
-	
-	 /*@When("Je saisis une description {string}") public void
-	 jeSaisisUneDescription(String categorieDescription) {
-	 seleniumUtils.click(CatalogPage.getDescriptionCategorie());
-	 seleniumUtils.switchToNewWindow(Setup.getDriver(), "Description_ifr");
-	 Setup.getDriver().switchTo().activeElement().sendKeys(categorieDescription);
-	 Setup.getDriver().switchTo().defaultContent();
-	 
-	 }
-	 */
+	@When("Je saisis une description {string} {string}")
+	public void jeSaisisUneDescription(String champDescription, String descriptionFrameID) {
+		seleniumUtils.click(CatalogPage.getChampDescription());
+		seleniumUtils.switchToNewWindow(Setup.getDriver(), descriptionFrameID);
+		Setup.getDriver().switchTo().activeElement().sendKeys(champDescription);
+		Setup.getDriver().switchTo().defaultContent();
+	}
 
 	@When("Je selctionne le parent category {string}")
 	public void jeSelctionneLeParentCategory(String string) {
